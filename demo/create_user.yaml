@@ -1,0 +1,13 @@
+---
+- name: User
+  hosts: demo
+  tasks:
+   - name: Create user
+     user:
+       name: "{{ user }}"
+       state: present
+   - name: Install Curl
+     apt:
+       name: curl
+       update-cache: yes
+
